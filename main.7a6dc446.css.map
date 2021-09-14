@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.css"],"names":[],"mappings":"AAAA,KACI,cACJ,CAEA,QACC,kBACD","file":"main.7a6dc446.css","sourceRoot":"../src","sourcesContent":["body {\n    font-size: 25px;\n}\n\n.option {\n margin-bottom: 20px;  \n}"]}
