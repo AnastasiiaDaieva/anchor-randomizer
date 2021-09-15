@@ -8,18 +8,47 @@
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
+    <header>
+      <h1 id="header">Anchor Randomizer</h1>
+    </header>
     <div class="websites">
       <div class="writepaper">
-        WritePaper Anchors
-        <input type="text" name="keyword" id="keyword" />
+        Keyword
+        <input type="text" name="keyword" id="keyword" placeholder="Insert a keyword here" />
         <ul class="newAnchors"></ul>
       </div>
-      <div class="essaypro">
+
+      <div class="select">
+        <label for="website">Website</label>
+        <select id="website" name="website">
+          <option value="writepaper">WritePaper</option>
+          <option value="essaypro">EssayPro</option>
+          <option value="essayhub">EssayHub</option>
+          <option value="essaywritingservice">EssayWritingService</option>
+          <option value="studyfy">Studyfy</option>
+          <option value="paperwriter">PaperWriter</option>
+          <option value="essayservice">EssayService</option>
+          <option value="domyessay">DoMyEssay</option>
+        </select>
+      </div>
+
+      <button class="button button__generate" type="button">Generate</button>
+
+      <!-- <div class="essaypro">
         EssayPro Anchors
         <input type="text" name="keyword" id="keyword" />
         <ul class="newAnchors"></ul>
-      </div>
+      </div> -->
     </div>
+    <button class="button button__scrollup">
+      <a href="#header"
+        ><svg widht="70" height="70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 7.58l5.995 5.988-1.416 1.414-4.579-4.574-4.59 4.574-1.416-1.414 6.006-5.988z"
+          />
+        </svg>
+      </a>
+    </button>
   </body>
   <script src="./index.js" type="module"></script>
 </html>

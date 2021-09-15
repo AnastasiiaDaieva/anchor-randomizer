@@ -1,6 +1,9 @@
 export default {
   accessInput: document.getElementById('keyword'),
   accessUl: document.querySelector('.newAnchors'),
+  accessSelectedWebsite: document.getElementById('website').value,
+  accessScrollUp: document.querySelector('.scrollup'),
+  accessGenerateButton: document.querySelector('.button__generate'),
   keywords: [
     'write my research papers',
     'pay someone to write my research paper',
@@ -16,14 +19,7 @@ export default {
     'online research paper writer',
     'do my research paper for me',
   ],
-  brandWritePaper: [
-    'WritePaper',
-    'at WritePaper',
-    'from WritePaper',
-    'by WritePaper',
-    'to WritePaper',
-  ],
-  brandEssayPro: ['EssayPro', 'at EssayPro', 'from EssayPro', 'by EssayPro', 'to EssayPro'],
+  brandName: ['WritePaper', 'at WritePaper', 'from WritePaper', 'by WritePaper', 'to WritePaper'],
 
   lsiWords: [
     '100 success',
@@ -175,7 +171,7 @@ export default {
     'interface',
     'is completed',
     'job',
-    'Keyword',
+    'keyword',
     'kind',
     'kind of',
     'learn',
@@ -383,8 +379,8 @@ export default {
     'worry about',
     'write a',
     'write my',
-    'writepaper',
-    'writepaper is',
+    'WritePaper',
+    'WritePaper is',
     'writer can',
     'writer hannah',
     'writer is',
