@@ -1,1 +1,0 @@
-{"version":3,"sources":["main.css"],"names":[],"mappings":"AAAA,KACE,cACF,CAEA,QACE,kBACF,CAEA,UACE,YACF,CAEA,YACE,iBACF","file":"main.a0756e09.css","sourceRoot":"../src","sourcesContent":["body {\n  font-size: 25px;\n}\n\n.option {\n  margin-bottom: 20px;\n}\n\n.websites {\n  display: flex;\n}\n\n.writepaper {\n  margin-right: 50px;\n}\n"]}
