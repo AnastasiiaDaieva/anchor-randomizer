@@ -1,26 +1,12 @@
 import refs from './refs.js';
 
-const {
-  keywords,
-  lsiWords,
-  brandName,
-  accessInput,
-  accessUl,
-  accessSelectedWebsite,
-  accessGenerateButton,
-} = refs;
-function saveSelectedWebsite() {
-  localStorage.setItem('selected:', `${accessSelectedWebsite}`);
-}
+const { lsiWords, accessInput, accessUl, accessGenerateButton, accessWebsite } = refs;
 
-const checkSavedWebsite = saveSelectedWebsite();
-function setUpSavedWebsite() {
-  localStorage.removeItem('selected:');
-  localStorage.setItem(checkSavedWebsite);
-}
 function createNewUlByKey(e) {
   if (e.code === 'Enter' || e.code === '13') {
     createNewUl();
+  } else {
+    return;
   }
 }
 function createNewUl() {
@@ -36,15 +22,35 @@ function createNewUl() {
   accessInput.addEventListener('change', createNewVariation6);
 }
 
+accessWebsite.addEventListener('change', randomBrandName);
+function getWebsite(e) {
+  const website = e.target.value;
+  const newBrandName = [
+    `${website}`,
+    `at ${website}`,
+    `from ${website}`,
+    `by ${website}`,
+    `to ${website}`,
+  ];
+  return newBrandName;
+}
+function randomBrandName(e) {
+  const newBrandName = getWebsite(e);
+  const randomBrand = newBrandName[Math.floor(Math.random() * newBrandName.length)];
+  console.log(randomBrand);
+  return randomBrand;
+}
+
 function createNewVariation1(e) {
   accessUl.textContent = 'Results';
 
   const anchor = e.target.value;
   lsiWords.forEach(lsiWord => {
     const randomLsi = lsiWords[Math.floor(Math.random() * lsiWords.length)];
-    const randomBrandName = brandName[Math.floor(Math.random() * brandName.length)];
-    const combination = `${anchor} ${randomLsi} ${randomBrandName}`;
-    console.log(combination);
+    const randomBrand = randomBrandName();
+    const arrayElements = [`${anchor}`, `${randomLsi}`, `${randomBrand}`];
+    console.log(arrayElements.join(', '));
+    const combination = `${anchor} ${randomLsi} ${randomBrand}`;
     let newLi = document.createElement('li');
     // let newText = combination.Math.floor(Math.random() * Math.floor(3)) - 1;
     newLi.textContent = `${combination}`;
@@ -56,9 +62,8 @@ function createNewVariation2(e) {
   const anchor = e.target.value;
   lsiWords.forEach(lsiWord => {
     const randomLsi = lsiWords[Math.floor(Math.random() * lsiWords.length)];
-    const randomBrandName = brandName[Math.floor(Math.random() * brandName.length)];
-    const combination = `${randomLsi} ${anchor} ${randomBrandName}`;
-    console.log(combination);
+    const randomBrand = randomBrandName();
+    const combination = `${randomLsi} ${anchor} ${randomBrand}`;
     let newLi = document.createElement('li');
     // let newText = combination.Math.floor(Math.random() * Math.floor(3)) - 1;
     newLi.textContent = `${combination}`;
@@ -70,9 +75,8 @@ function createNewVariation3(e) {
   const anchor = e.target.value;
   lsiWords.forEach(lsiWord => {
     const randomLsi = lsiWords[Math.floor(Math.random() * lsiWords.length)];
-    const randomBrandName = brandName[Math.floor(Math.random() * brandName.length)];
-    const combination = `${randomBrandName} ${randomLsi} ${anchor}`;
-    console.log(combination);
+    const randomBrand = randomBrandName();
+    const combination = `${randomBrand} ${randomLsi} ${anchor}`;
     let newLi = document.createElement('li');
     // let newText = combination.Math.floor(Math.random() * Math.floor(3)) - 1;
     newLi.textContent = `${combination}`;
@@ -84,9 +88,8 @@ function createNewVariation4(e) {
   const anchor = e.target.value;
   lsiWords.forEach(lsiWord => {
     const randomLsi = lsiWords[Math.floor(Math.random() * lsiWords.length)];
-    const randomBrandName = brandName[Math.floor(Math.random() * brandName.length)];
-    const combination = `${randomBrandName} ${anchor} ${randomLsi}`;
-    console.log(combination);
+    const randomBrand = randomBrandName();
+    const combination = `${randomBrand} ${anchor} ${randomLsi}`;
     let newLi = document.createElement('li');
     // let newText = combination.Math.floor(Math.random() * Math.floor(3)) - 1;
     newLi.textContent = `${combination}`;
@@ -98,9 +101,8 @@ function createNewVariation5(e) {
   const anchor = e.target.value;
   lsiWords.forEach(lsiWord => {
     const randomLsi = lsiWords[Math.floor(Math.random() * lsiWords.length)];
-    const randomBrandName = brandName[Math.floor(Math.random() * brandName.length)];
-    const combination = `${randomLsi} ${randomBrandName} ${anchor}`;
-    console.log(combination);
+    const randomBrand = randomBrandName();
+    const combination = `${randomLsi} ${randomBrand} ${anchor}`;
     let newLi = document.createElement('li');
     // let newText = combination.Math.floor(Math.random() * Math.floor(3)) - 1;
     newLi.textContent = `${combination}`;
@@ -112,9 +114,8 @@ function createNewVariation6(e) {
   const anchor = e.target.value;
   lsiWords.forEach(lsiWord => {
     const randomLsi = lsiWords[Math.floor(Math.random() * lsiWords.length)];
-    const randomBrandName = brandName[Math.floor(Math.random() * brandName.length)];
-    const combination = `${anchor} ${randomBrandName} ${randomLsi}`;
-    console.log(combination);
+    const randomBrand = randomBrandName();
+    const combination = `${anchor} ${randomBrand} ${randomLsi}`;
     let newLi = document.createElement('li');
     // let newText = combination.Math.floor(Math.random() * Math.floor(3)) - 1;
     newLi.textContent = `${combination}`;
@@ -122,5 +123,5 @@ function createNewVariation6(e) {
   });
 }
 
-accessInput.addEventListener('keydown', createNewUl);
+accessInput.addEventListener('keydown', createNewUlByKey);
 accessGenerateButton.addEventListener('click', createNewUl);

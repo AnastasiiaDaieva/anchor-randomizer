@@ -6,7 +6,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  /* outline: 1px solid tomato; */
+  outline: 1px solid tomato;
 }
 
 body {
@@ -25,6 +25,7 @@ body {
 
 .websites {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .writepaper {
