@@ -6,6 +6,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto Slab', serif;
   /* outline: 1px solid tomato; */
 }
 
@@ -21,6 +23,10 @@ body {
 
 .option {
   margin-bottom: 20px;
+}
+
+.header__title {
+  text-align: center;
 }
 
 .websites {
@@ -55,4 +61,17 @@ body {
 
 .select {
   margin-right: 60px;
+}
+
+.newAnchors,
+.newAnchor {
+  font-family: 'Raleway', sans-serif;
+}
+
+.newAnchors {
+  font-weight: 600;
+}
+
+.newAnchor {
+  font-weight: 400;
 }

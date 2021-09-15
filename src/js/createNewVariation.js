@@ -46,6 +46,7 @@ function createNewVariation1(e) {
     const combination = `${anchor} ${randomLsi} ${randomBrandName}`;
     console.log(combination);
     let newLi = document.createElement('li');
+    newLi.classList.add('newAnchor');
     // let newText = combination.Math.floor(Math.random() * Math.floor(3)) - 1;
     newLi.textContent = `${combination}`;
     accessUl.appendChild(newLi);
@@ -60,6 +61,7 @@ function createNewVariation2(e) {
     const combination = `${randomLsi} ${anchor} ${randomBrandName}`;
     console.log(combination);
     let newLi = document.createElement('li');
+    newLi.classList.add('newAnchor');
     // let newText = combination.Math.floor(Math.random() * Math.floor(3)) - 1;
     newLi.textContent = `${combination}`;
     accessUl.appendChild(newLi);
@@ -74,6 +76,7 @@ function createNewVariation3(e) {
     const combination = `${randomBrandName} ${randomLsi} ${anchor}`;
     console.log(combination);
     let newLi = document.createElement('li');
+    newLi.classList.add('newAnchor');
     // let newText = combination.Math.floor(Math.random() * Math.floor(3)) - 1;
     newLi.textContent = `${combination}`;
     accessUl.appendChild(newLi);
@@ -88,6 +91,7 @@ function createNewVariation4(e) {
     const combination = `${randomBrandName} ${anchor} ${randomLsi}`;
     console.log(combination);
     let newLi = document.createElement('li');
+    newLi.classList.add('newAnchor');
     // let newText = combination.Math.floor(Math.random() * Math.floor(3)) - 1;
     newLi.textContent = `${combination}`;
     accessUl.appendChild(newLi);
@@ -102,6 +106,7 @@ function createNewVariation5(e) {
     const combination = `${randomLsi} ${randomBrandName} ${anchor}`;
     console.log(combination);
     let newLi = document.createElement('li');
+    newLi.classList.add('newAnchor');
     // let newText = combination.Math.floor(Math.random() * Math.floor(3)) - 1;
     newLi.textContent = `${combination}`;
     accessUl.appendChild(newLi);
@@ -116,11 +121,12 @@ function createNewVariation6(e) {
     const combination = `${anchor} ${randomBrandName} ${randomLsi}`;
     console.log(combination);
     let newLi = document.createElement('li');
+    newLi.classList.add('newAnchor');
     // let newText = combination.Math.floor(Math.random() * Math.floor(3)) - 1;
     newLi.textContent = `${combination}`;
     accessUl.appendChild(newLi);
   });
 }
 
-accessInput.addEventListener('keydown', createNewUl);
+accessInput.addEventListener('keydown', createNewUlByKey);
 accessGenerateButton.addEventListener('click', createNewUl);
