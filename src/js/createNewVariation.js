@@ -1,14 +1,6 @@
 import refs from './refs.js';
 
-const {
-  keywords,
-  lsiWords,
-  brandName,
-  accessInput,
-  accessUl,
-  accessSelectedWebsite,
-  accessGenerateButton,
-} = refs;
+const { keywords, lsiWords, brandName, accessInput, accessUl, accessGenerateButton } = refs;
 
 function createNewUlByKey(e) {
   if (e.code === 'Enter' || e.code === '13') {
