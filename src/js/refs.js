@@ -19,7 +19,14 @@ export default {
     'online research paper writer',
     'do my research paper for me',
   ],
-  brandName: ['EssayPro', 'at EssayPro', 'from EssayPro', 'by EssayPro', 'to EssayPro'],
+  brandName: [
+    'EssayPro',
+    'at EssayPro',
+    'from EssayPro',
+    'by EssayPro',
+    'to EssayPro',
+    'with EssayPro',
+  ],
   lsiWords: [
     'academic',
     'assignment',
