@@ -1,9 +1,9 @@
 export default {
   accessInput: document.getElementById('keyword'),
   accessUl: document.querySelector('.newAnchors'),
-  accessSelectedWebsite: document.getElementById('website').value,
+  // accessSelectedWebsite: document.getElementById('website').value,
   accessScrollUp: document.querySelector('.scrollup'),
-  accessGenerateButton: document.querySelector('.button__generate'),
+  // accessGenerateButton: document.querySelector('.button__generate'),
   keywords: [
     'write my research papers',
     'pay someone to write my research paper',
@@ -518,7 +518,7 @@ export default {
     'our clients',
     'the top',
     'academic performance',
-    'receive a',
+    'receive A',
     'you receive',
     'work on',
     'to confirm',

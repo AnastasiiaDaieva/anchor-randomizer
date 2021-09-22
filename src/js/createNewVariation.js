@@ -1,10 +1,11 @@
 import refs from './refs.js';
 
-const { keywords, lsiWords, brandName, accessInput, accessUl, accessGenerateButton } = refs;
+const { keywords, lsiWords, brandName, accessInput, accessUl } = refs;
 
 function createNewUlByKey(e) {
   if (e.code === 'Enter' || e.code === '13') {
-    createNewUl();
+    allVariations(e);
+    addPicture();
   }
 }
 
@@ -18,30 +19,20 @@ function addPicture() {
   accessUl.insertAdjacentHTML('beforeend', `${createdPicture}`);
 }
 
-function createNewUl() {
+function createNewUlByClick(e) {
   accessUl.innerHTML = '';
-  accessInput.addEventListener('change', createNewVariation1);
-  accessInput.addEventListener('change', createNewVariation2);
+  allVariations(e);
 
-  accessInput.addEventListener('change', createNewVariation3);
+  addPicture();
+}
 
-  accessInput.addEventListener('change', createNewVariation4);
-
-  accessInput.addEventListener('change', createNewVariation5);
-
-  accessInput.addEventListener('paste', createNewVariation6);
-  accessInput.addEventListener('paste', createNewVariation1);
-  accessInput.addEventListener('paste', createNewVariation2);
-
-  accessInput.addEventListener('paste', createNewVariation3);
-
-  accessInput.addEventListener('paste', createNewVariation4);
-
-  accessInput.addEventListener('paste', createNewVariation5);
-
-  accessInput.addEventListener('paste', createNewVariation6);
-  accessInput.addEventListener('change', addPicture);
-  accessInput.addEventListener('paste', addPicture);
+function allVariations(e) {
+  createNewVariation1(e);
+  createNewVariation2(e);
+  createNewVariation3(e);
+  createNewVariation4(e);
+  createNewVariation5(e);
+  createNewVariation6(e);
 }
 
 function createNewVariation1(e) {
@@ -132,4 +123,4 @@ function createNewVariation6(e) {
 }
 
 accessInput.addEventListener('keydown', createNewUlByKey);
-accessGenerateButton.addEventListener('click', createNewUl);
+// accessGenerateButton.addEventListener('click', createNewUlByClick);
