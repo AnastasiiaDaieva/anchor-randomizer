@@ -3,20 +3,20 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://eche-unicorn.github.io/anchor-randomizer",
+  "homepage": "https://AnastasiiaDaieva.github.io/anchor-randomizer",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /anchor-randomizer/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eche-unicorn/anchor-randomizer.git"
+    "url": "git+https://github.com/AnastasiiaDaieva/anchor-randomizer.git"
   },
   "keywords": [],
   "author": "Anastasiia Daieva <d.anasteysha@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eche-unicorn/anchor-randomizer/issues"
+    "url": "https://github.com/AnastasiiaDaieva/anchor-randomizer/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
