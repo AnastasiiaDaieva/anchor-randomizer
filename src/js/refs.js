@@ -1,9 +1,12 @@
 export default {
-  accessInput: document.getElementById('keyword'),
+  accessKeywordField: document.getElementById('keyword'),
+  accessLsiField: document.getElementById('keyword'),
+  accessWebsiteField: document.getElementById('keyword'),
+  accessForm: document.querySelector('.form'),
   accessUl: document.querySelector('.newAnchors'),
   // accessSelectedWebsite: document.getElementById('website').value,
   accessScrollUp: document.querySelector('.scrollup'),
-  // accessGenerateButton: document.querySelector('.button__generate'),
+  accessGenerateButton: document.querySelector('.button__generate'),
   keywords: [
     'write my research papers',
     'pay someone to write my research paper',
